@@ -1,0 +1,17 @@
+<%= form_for(@tweet) do |f| %>
+<div class="formIn">
+    <div>
+        <%= f.label :message, 'メッセージ' %>
+        <%= f.text_field :message %>
+    </div>
+    <% if local_assigns[:edit_flag].present? %>
+        <div>
+        <%= f.submit '更新' %>
+    <% else %>
+        <div>
+            <%= f.submit '登録' %>
+        </div>
+    </div>
+    <% end %>
+</div>
+<% end %>

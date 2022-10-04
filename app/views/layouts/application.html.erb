@@ -10,6 +10,27 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="container">
+      <div id="header">
+        <%= render "header" %>
+      </div>
+      <div id="sidebar">
+        <%= render "sidebar" %>
+      </div>
+      <div id="content">
+        <div>
+    <figure>
+      <img src="assets/Icon.jpg">
+    </figure>
+    <div class="userName">近大<span class="nameID">@Kindai</span></div>
+    <div class="text">
+      <%= yield %>
+    </div>
+</div>
+      </div>
+      <div id="footer">
+        <%= render "footer" %>
+      </div>
+    </div>
   </body>
 </html>
